@@ -50,7 +50,7 @@ npm install
 複製程式碼
 npm start
 ```
-前端應用將會運行在 http://localhost:3000。
+前端應用將會運行在 http://localhost:1567。
 
 ### **3. 安裝後端依賴**
 進入 backend 目錄並安裝所需的 npm 套件：
@@ -71,7 +71,7 @@ MONGO_URI=mongodb://localhost:27017/studenthub
 複製程式碼
 npm start
 ```
-後端將會運行在 http://localhost:5000。
+後端將會運行在 http://localhost:5173。
 
 ### **6. 完成**
 現在，您可以在瀏覽器中打開前端頁面並開始使用應用程式。
