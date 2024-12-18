@@ -67,10 +67,10 @@ git clone https://github.com/yourusername/StudentHub.git
 cd StudentHub
 ```
 ### **2. 安裝前端依賴**
-進入 frontend 目錄並安裝所需的 npm 套件：
+進入 react-ts-mid 目錄並安裝所需的 npm 套件：
 ```bash
 複製程式碼
-cd frontend
+cd react-ts-mid
 npm install
 ```
 啟動前端開發伺服器：
@@ -82,10 +82,10 @@ npm start
 前端應用將會運行在 http://localhost:2888。
 
 ### **3. 安裝後端依賴**
-進入 backend 目錄並安裝所需的 npm 套件：
+進入 mondoDemo 目錄並安裝所需的 npm 套件：
 ```bash
 複製程式碼
-cd backend
+cd mondoDemo
 npm install
 ```
 ### **4. 設定 MongoDB**
@@ -95,7 +95,7 @@ npm install
 MONGO_URI=mongodb://localhost:27017/studenthub
 ```
 ### **5. 啟動後端伺服器**
-在 backend 目錄啟動後端伺服器：
+在 mondoDemo 目錄啟動後端伺服器：
 ```bash
 複製程式碼
 npm start
