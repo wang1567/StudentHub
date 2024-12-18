@@ -14,28 +14,32 @@ export class UserController extends Contorller {
         this.service = new UserService();
     }
 
-    public async findAll(Request: Request, Response: Response) {
-
-        const res: resp<Array<DBResp<Student>> | undefined> = {
+    public async findAll(req: Request, res: Response) {
+        const response: resp<Array<DBResp<Student>> | undefined> = {
             code: 200,
             message: "",
-            body: undefined
+            body: undefined,
+        };
+    
+        try {
+            // 使用 lean() 返回普通对象
+            const dbResp = await this.service.getAllStudents().lean; 
+    
+            if (dbResp) {
+                response.body = dbResp;
+                response.message = "Find success";
+                res.send(response);
+            } else {
+                response.code = 404;
+                response.message = "No students found";
+                res.status(404).send(response);
+            }
+        } catch (error) {
+            response.code = 500;
+            response.message = "Server error";
+            res.status(500).send(response);
         }
-
-        const dbResp = await this.service.getAllStudents();
-        if (dbResp) {
-            res.body = dbResp;
-            res.message = "find sucess";
-            Response.send(res);
-        } else {
-            res.code = 500;
-            res.message = "server error";
-            Response.status(500).send(res);
-        }
-
-    }
-
-    public async insertOne(Request: Request, Response: Response) {
+    }    public async insertOne(Request: Request, Response: Response) {
         const resp = await this.service.insertOne(Request.body)
         Response.status(resp.code).send(resp)
     }

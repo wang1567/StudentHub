@@ -41,6 +41,7 @@ export default function RootTemplate() {
                             <div className="student-card" key={student._id}> 
                                 <div className="student-info">
                                     <h2>{student.name}</h2>
+                                    <p>學生ID: {student._id}</p>
                                     <p>帳號: {student.userName}</p>
                                     <p>座號: {student.sid}</p>
                                     <p>系級: {student.department}</p>

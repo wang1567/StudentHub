@@ -5,12 +5,12 @@ export default function Navigation() {
     return (
         <nav className="navigation">
             <div className="nav-title">
-                <Link to="/" className="home-link">學生管理系統</Link> 
+                <Link to="/" className="home-link">StudentHub</Link> 
             </div>
             <div className="nav-links">
-                <Link to="/add" className="nav-button">新增學生</Link> 
-                <Link to="/delete" className="nav-button">刪除學生</Link> 
-                <Link to="/update" className="nav-button">更新學生</Link> 
+                <Link to="/delete" className="nav-button">刪除學生資料</Link> 
+                <Link to="/update" className="nav-button">搜尋及更新學生資料</Link> 
+                <Link to="/add" className="nav-button">新增學生資料</Link>
             </div>
         </nav>
     );

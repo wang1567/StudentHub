@@ -14,6 +14,7 @@ export default function UpdateName() {
         grade: "",
         class: "",
         email: "",
+        absences: "",  // 新增缺席次數欄位
     });
     const [showUserData, setShowUserData] = useState<boolean>(false);
     const [message, setMessage] = useState<string>("");
@@ -80,6 +81,7 @@ export default function UpdateName() {
         { label: "年級", key: "grade" },
         { label: "班級", key: "class" },
         { label: "Email", key: "email" },
+        { label: "缺席次數", key: "absences" }, // 新增缺席次數欄位
     ];
 
     return (
@@ -133,3 +135,4 @@ export default function UpdateName() {
         </>
     );
 }
+
