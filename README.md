@@ -50,7 +50,7 @@ npm install
 複製程式碼
 npm start
 ```
-前端應用將會運行在 http://localhost:1567。
+前端應用將會運行在 http://localhost:2888。
 
 ### **3. 安裝後端依賴**
 進入 backend 目錄並安裝所需的 npm 套件：
@@ -82,7 +82,7 @@ npm start
 + **使用到的URL**
 + `http://localhost:2888/api/v1/user/findAll`
 + ###### 取得的Response
-    - 200
+    - 
         ```json
         {
             "code": 200,
