@@ -89,7 +89,7 @@ npm start
             "message": "find sucess",
             "body": [
                 {
-                    "_id": "675ed9f4bc8f2ebc70989e03",
+                    "_id": "6761a9da059b9c65a4204fbf",
                     "userName": "tkuee0787",
                     "sid": "1",
                     "name": "張佳慧",
@@ -98,79 +98,89 @@ npm start
                     "class": "A",
                     "email": "tkuee0787@tkuim.com"
                 },
-            ]...
+                {
+                    "_id": "6761a9da059b9c65a4204fc0",
+                    "userName": "tkubm9553",
+                    "sid": "2",
+                    "name": "蔡文杰",
+                    "department": "企業管理系",
+                    "grade": "二年級",
+                    "class": "A",
+                    "email": "tkubm9553@tkuim.com"
+                },...
+            ]
         }
         ```
 ### 2.根據 ID 或姓名查詢學生資料
-+ **URL**
++ **使用到的URL**
     + `GET /api/v1/user/findById`
     + `GET /api/v1/user/findByName`
-+ ###### Request
++ ###### 取得的Request
 
     ```
-    id=675ed9f4bc8f2ebc70989e03
+    id": "6761a9da059b9c65a4204fc0
     ```
     or
     ```
-    name=張佳慧
+    name=蔡文杰
     ```
 
-+ ###### Response
++ ###### 取得的Response
     - 200 
         ```json
         {
             "code": 200,
             "message": "find success",
             "body": {
-                "_id": "675ed9f4bc8f2ebc70989e03",
-                "userName": "tkuee0787",
-                "sid": "1",
-                "name": "張佳慧",
-                "department": "電機工程系",
-                "grade": "四年級",
+                "_id": "6761a9da059b9c65a4204fc0",
+                "userName": "tkubm9553",
+                "sid": "2",
+                "name": "蔡文杰",
+                "department": "企業管理系",
+                "grade": "二年級",
                 "class": "A",
-                "email": "tkuee0787@tkuim.com"
+                "email": "tkubm9553@tkuim.com"
             }
         }
         ```
     
 ### 3.新增學生資料
-+ **URL**
++ **使用到的URL**
     + `POST /api/v1/user/insertOne`
-+ ###### Request
++ ###### 取得的Request
     ```json
     {
-        "userName":"tku1234",
-        "name": "王大明",
-        "department": "機械工程系",
+        "userName":"tku1567",
+        "name": "王國全",
+        "department": "資訊管理系",
         "grade": "六年級",
         "class": "B",
-        "email": "tkume1234@tku.com"
+        "email": "tkume1567@tku.com"
     }
     ```
-+ ###### Response
++ ###### 取得的Response
     - 200
         ```json
         {
             "code": 200,
             "message": "insert success",
             "body": {
-                "userName":"tku1234",
-                "name": "王大明",
-                "department": "機械工程系",
-                "grade": "六年級",
-                "class": "B",
-                "email": "tkume1234@tku.com",
-                "_id": "675edf9682c1d21d9087d6ec"
+                       "userName":"tku1567",
+                       "name": "王國全",
+                       "department": "資訊管理系",
+                       "grade": "六年級",
+                       "class": "B",
+                       "email": "tkume1567@tku.com",
+                       "_id": "6762998299d3334a529baafe"
             }
         }
         ```
     
 ### 4.根據 ID 或姓名刪除學生資料
-+ **URL** 
++ **使用到的URL** 
     + `DELETE /api/v1/user/DeleteById`
     + `DELETE /api/v1/user/DeleteByName`
-+ ###### Request
++ ###### 取得的Request
     ```
     id=675ed9f4bc8f2ebc70989e03
     ```
@@ -178,7 +188,7 @@ npm start
     ```
     name=張佳慧
     ```
-+ ###### Response
++ ###### 取得的Response
     - 200
         ```json
         {
@@ -191,11 +201,11 @@ npm start
         }
         ```
   
-### 5.根據 ID 或姓名更新學生資料
-+ **URL**
+### 5.利用ID 或姓名更新學生資料
++ **使用到的URL**
     + `PUT /api/v1/user/UpdateById`
     + `PUT /api/v1/user/UpdateByName`
-+ ###### Request
++ ###### 取得的Request
     ```
     id=675ed9f4bc8f2ebc70989e03
     ```
@@ -210,7 +220,7 @@ npm start
         "department": "資訊管理學系",
     }
     ```
-+ ###### Response
++ ###### 取得的Response
     - 200
         ```json
         {
