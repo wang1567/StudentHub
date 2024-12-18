@@ -14,7 +14,7 @@
 
 以下是本專案的架構圖，展示了前端、後端、資料庫的互動流程：
 
-![diagram] (https://i.imgur.com/BqF3Nzo.png)
+![diagram](https://imgur.com/BqF3Nzo.png).
 
 ##專案流程圖
 ```
