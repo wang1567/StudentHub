@@ -209,15 +209,14 @@ npm start
     ```
     id=675ed9f4bc8f2ebc70989e03
     ```
-    or
+    或者
     ```
     name=張佳慧
     ```
-    and
+    或者
     ```json
     {
-        //選擇修改之資訊即可
-        "department": "資訊管理學系",
+        "department": "風險管理系",
     }
     ```
 + ###### 取得的Response
@@ -231,7 +230,7 @@ npm start
                 "userName": "tkumb1234",
                 "sid": "1",
                 "name": "張佳慧",
-                "department": "資訊管理學系",
+                "department": "風險管理系",
                 "grade": "四年級",
                 "class": "A",
                 "email": "tkuee0787@tkuim.com"
