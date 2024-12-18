@@ -126,7 +126,7 @@ npm start
     ```
 
 + ###### 取得的Response
-    - 200 
+    - 
         ```json
         {
             "code": 200,
@@ -204,11 +204,13 @@ npm start
     + `PUT /api/v1/user/UpdateById`
     + `PUT /api/v1/user/UpdateByName`
 + ###### 取得的Request
+  -
     ```
     id=675ed9f4bc8f2ebc70989e03
     或者
     name=張佳慧
     ```
+  -  
     更改的部分
     ```json
     {
