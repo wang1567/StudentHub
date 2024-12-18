@@ -37,11 +37,11 @@
  ┌──────────────────────────────────┐
  │           新增學生               │ ──→ 發送 POST 請求到 /api/v1/user/insertOne
  └──────────────────────────────────┘
- │           查詢學生               │ ──→ 發送 GET 請求到 /api/v1/user/findAll
+ │           查詢學生               │ ──→ 發送 GET 請求到 /api/v1/user/findByName 或是 /api/v1/user/findById
  └──────────────────────────────────┘
- │           更新學生               │ ──→ 發送 PUT 請求到 /api/v1/user/update/:id
+ │           更新學生               │ ──→ 發送 PUT 請求到 /api/v1/user/updateById 或是 /api/v1/user/updateByName
  └──────────────────────────────────┘
- │           刪除學生               │ ──→ 發送 DELETE 請求到 /api/v1/user/delete/:id
+ │           刪除學生               │ ──→ 發送 DELETE 請求到 /api/v1/user/deleteByName 或是 /api/v1/user/deleteById
  └──────────────────────────────────┘
       ↓
   後端路由匹配對應操作
