@@ -76,110 +76,215 @@ npm start
 ### **6. 完成**
 現在，您可以在瀏覽器中打開前端頁面並開始使用應用程式。
 
-##API 規格說明
+## API 規格說明
 以下是本專案中提供的 API 規格，包括請求方式、請求參數及回應格式。
+### 1.查詢所有學生資料
++ **URL**
+    + `GET /api/v1/user/findAll`
++ ###### Response
+    - 200
+        ```json
+        {
+            "code": 200,
+            "message": "find sucess",
+            "body": [
+                {
+                    "_id": "675ed9f4bc8f2ebc70989e03",
+                    "userName": "tkuee0787",
+                    "sid": "1",
+                    "name": "張佳慧",
+                    "department": "電機工程系",
+                    "grade": "四年級",
+                    "class": "A",
+                    "email": "tkuee0787@tkuim.com"
+                },...
+            ]
+        }
+        ```
+### 2.根據 ID 或姓名查詢學生資料
++ **URL**
+    + `GET /api/v1/user/findById`
+    + `GET /api/v1/user/findByName`
++ ###### Request
 
-### 1. 獲取所有學生資料
-**URL: /api/v1/user/findAll**
-方法: GET
-描述: 獲取所有學生資料。
-回應:
-json
-複製程式碼
-{
-  "code": 200,
-  "message": "find success",
-  "body": [
+    ```
+    id=675ed9f4bc8f2ebc70989e03
+    ```
+    or
+    ```
+    name=張佳慧
+    ```
+
++ ###### Response
+    - 200 
+        ```json
+        {
+            "code": 200,
+            "message": "find success",
+            "body": {
+                "_id": "675ed9f4bc8f2ebc70989e03",
+                "userName": "tkuee0787",
+                "sid": "1",
+                "name": "張佳慧",
+                "department": "電機工程系",
+                "grade": "四年級",
+                "class": "A",
+                "email": "tkuee0787@tkuim.com"
+            }
+        }
+        ```
+    - 404
+        ```json
+        {
+            "code": 404,
+            "message": "user not found"
+        }
+        ```
+    - 500 
+        ```json
+        {
+            "code": 500,
+            "message": "server error"
+        }
+        ```
+### 3.新增學生資料
++ **URL**
+    + `POST /api/v1/user/insertOne`
++ ###### Request
+    ```json
     {
-      "id": "12345",
-      "name": "John Doe",
-      "userName": "tkubm1760",
-      "department": "Business Management",
-      "seatNumber": "1760"
+        "userName":"tku1234",
+        "name": "王大明",
+        "department": "機械工程系",
+        "grade": "六年級",
+        "class": "B",
+        "email": "tkume1234@tku.com"
     }
-  ]
-}
-2. 根據學號查找學生資料
-URL: /api/students/{id}
-方法: GET
-描述: 根據學生 ID 查找學生資料。
-回應:
-json
-複製程式碼
-{
-  "code": 200,
-  "message": "find success",
-  "body": {
-    "id": "12345",
-    "name": "John Doe",
-    "userName": "tkubm1760",
-    "department": "Business Management",
-    "seatNumber": "1760"
-  }
-}
-3. 新增學生資料
-URL: /api/students
-方法: POST
-參數:
-json
-複製程式碼
-{
-  "name": "John Doe",
-  "userName": "tkubm1760",
-  "department": "Business Management",
-  "seatNumber": "1760"
-}
-回應:
-json
-複製程式碼
-{
-  "code": 200,
-  "message": "insert success",
-  "body": {
-    "id": "12345",
-    "name": "John Doe",
-    "userName": "tkubm1760",
-    "department": "Business Management",
-    "seatNumber": "1760"
-  }
-}
-4. 更新學生資料
-URL: /api/students/{id}
-方法: PUT
-參數:
-json
-複製程式碼
-{
-  "name": "John Doe",
-  "userName": "tkubm1760",
-  "department": "Business Management",
-  "seatNumber": "1760"
-}
-回應:
-json
-複製程式碼
-{
-  "code": 200,
-  "message": "update success",
-  "body": {
-    "id": "12345",
-    "name": "John Doe",
-    "userName": "tkubm1760",
-    "department": "Business Management",
-    "seatNumber": "1760"
-  }
-}
-5. 刪除學生資料
-URL: /api/students/{id}
-方法: DELETE
-回應:
-json
-複製程式碼
-{
-  "code": 200,
-  "message": "delete success",
-  "body": {
-    "id": "12345"
-  }
-}
+    ```
++ ###### Response
+    - 200
+        ```json
+        {
+            "code": 200,
+            "message": "insert success",
+            "body": {
+                "userName":"tku1234",
+                "name": "王大明",
+                "department": "機械工程系",
+                "grade": "六年級",
+                "class": "B",
+                "email": "tkume1234@tku.com",
+                "_id": "675edf9682c1d21d9087d6ec"
+            }
+        }
+        ```
+    - 403
+        ```json
+        {
+            "code": 403,
+            "message": "座號已存在"
+        }
+        ```
+        ```json
+        {
+            "code": 403,
+            "message": "student list is full"
+        }
+        ```
+    - 500
+        ```json
+        {
+            "code": 500,
+            "message": "server error"
+        }
+        ```
+### 4.根據 ID 或姓名刪除學生資料
++ **URL** 
+    + `DELETE /api/v1/user/DeleteById`
+    + `DELETE /api/v1/user/DeleteByName`
++ ###### Request
+    ```
+    id=675ed9f4bc8f2ebc70989e03
+    ```
+    or
+    ```
+    name=張佳慧
+    ```
++ ###### Response
+    - 200
+        ```json
+        {
+            "code": 200,
+            "message": "sucess",
+            "body": {
+                "acknowledged": true,
+                "deletedCount": 1
+            }
+        }
+        ```
+    - 404
+        ```json
+        {
+            "code": 404,
+            "message": "user not found"
+        }
+        ```
+    - 500
+        ```json
+        {
+            "code": 500,
+            "message": "server error"
+        }
+        ```
+### 5.根據 ID 或姓名更新學生資料
++ **URL**
+    + `PUT /api/v1/user/UpdateById`
+    + `PUT /api/v1/user/UpdateByName`
++ ###### Request
+    ```
+    id=675ed9f4bc8f2ebc70989e03
+    ```
+    or
+    ```
+    name=張佳慧
+    ```
+    and
+    ```json
+    {
+        //選擇修改之資訊即可
+        "department": "資訊管理學系",
+    }
+    ```
++ ###### Response
+    - 200
+        ```json
+        {
+            "code": 200,
+            "message": "Update successful",
+            "body": {
+                "_id": "675ed9f4bc8f2ebc70989e03",
+                "userName": "tkumb1234",
+                "sid": "1",
+                "name": "張佳慧",
+                "department": "資訊管理學系",
+                "grade": "四年級",
+                "class": "A",
+                "email": "tkuee0787@tkuim.com"
+            }
+        }
+        ```
+    - 404
+        ```json
+        {
+            "code": 404,
+            "message": "user not found"
+        }
+        ```
+    - 500
+        ```json
+        {
+            "code": 500,
+            "message": "server error"
+        }
+        ```
 
