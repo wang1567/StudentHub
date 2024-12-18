@@ -80,7 +80,7 @@ npm start
 以下是本專案中提供的 API 規格，包括請求方式、請求參數及回應格式。
 ### 1.查詢所有學生資料
 + **使用到的URL**
-+ `http://localhost:2888/api/v1/user/findAll`
++ `**http://localhost:2888/api/v1/user/findAll**`
 + ###### 取得的Response
     - 
         ```json
@@ -113,8 +113,8 @@ npm start
         ```
 ### 2.根據 ID 或姓名查詢學生資料
 + **使用到的URL**
-    + `GET /api/v1/user/findById`
-    + `GET /api/v1/user/findByName`
+    + `**http://localhost:2888/api/v1/user/findByName**`
+    + `**http://localhost:2888/api/v1/user/findById**`
 + ###### 取得的Request
 
     ```
@@ -146,7 +146,7 @@ npm start
     
 ### 3.新增學生資料
 + **使用到的URL**
-    + `POST /api/v1/user/insertOne`
+    + `**http://localhost:2888/api/v1/user/findByName**`
 + ###### 取得的Request
     ```json
     {
@@ -178,8 +178,8 @@ npm start
     
 ### 4.利用ID或是姓名來刪除學生資料
 + **使用到的URL** 
-    + `DELETE /api/v1/user/DeleteById`
-    + `DELETE /api/v1/user/DeleteByName`
+    + `**http://localhost:2888/api/v1/user/deletedById**`
+    + `**http://localhost:2888/api/v1/user/deletedByName**`
 + ###### 取得的Request
     ```
     id=675ed9f4bc8f2ebc70989e03
@@ -201,8 +201,8 @@ npm start
   
 ### 5.利用ID或是姓名來更新學生資料
 + **使用到的URL**
-    + `PUT /api/v1/user/UpdateById`
-    + `PUT /api/v1/user/UpdateByName`
+    + `**http://localhost:2888/api/v1/user/updateByName**`
+    + `**http://localhost:2888/api/v1/user/updateById**`
 + ###### 取得的Request
   -
     ```
