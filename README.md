@@ -133,20 +133,7 @@ npm start
             }
         }
         ```
-    - 404
-        ```json
-        {
-            "code": 404,
-            "message": "user not found"
-        }
-        ```
-    - 500 
-        ```json
-        {
-            "code": 500,
-            "message": "server error"
-        }
-        ```
+    
 ### 3.新增學生資料
 + **URL**
     + `POST /api/v1/user/insertOne`
@@ -178,26 +165,7 @@ npm start
             }
         }
         ```
-    - 403
-        ```json
-        {
-            "code": 403,
-            "message": "座號已存在"
-        }
-        ```
-        ```json
-        {
-            "code": 403,
-            "message": "student list is full"
-        }
-        ```
-    - 500
-        ```json
-        {
-            "code": 500,
-            "message": "server error"
-        }
-        ```
+    
 ### 4.根據 ID 或姓名刪除學生資料
 + **URL** 
     + `DELETE /api/v1/user/DeleteById`
@@ -222,20 +190,7 @@ npm start
             }
         }
         ```
-    - 404
-        ```json
-        {
-            "code": 404,
-            "message": "user not found"
-        }
-        ```
-    - 500
-        ```json
-        {
-            "code": 500,
-            "message": "server error"
-        }
-        ```
+  
 ### 5.根據 ID 或姓名更新學生資料
 + **URL**
     + `PUT /api/v1/user/UpdateById`
@@ -272,19 +227,5 @@ npm start
                 "email": "tkuee0787@tkuim.com"
             }
         }
-        ```
-    - 404
-        ```json
-        {
-            "code": 404,
-            "message": "user not found"
-        }
-        ```
-    - 500
-        ```json
-        {
-            "code": 500,
-            "message": "server error"
-        }
-        ```
+     
 
