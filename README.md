@@ -79,9 +79,9 @@ npm start
 ## API 規格說明
 以下是本專案中提供的 API 規格，包括請求方式、請求參數及回應格式。
 ### 1.查詢所有學生資料
-+ **URL**
-    + `GET /api/v1/user/findAll`
-+ ###### Response
++ **使用到的URL**
++ `http://localhost:2888/api/v1/user/findAll`
++ ###### 取得的Response
     - 200
         ```json
         {
@@ -176,16 +176,14 @@ npm start
         }
         ```
     
-### 4.根據 ID 或姓名刪除學生資料
+### 4.利用ID或是姓名來刪除學生資料
 + **使用到的URL** 
     + `DELETE /api/v1/user/DeleteById`
     + `DELETE /api/v1/user/DeleteByName`
 + ###### 取得的Request
     ```
     id=675ed9f4bc8f2ebc70989e03
-    ```
-    or
-    ```
+    或者
     name=張佳慧
     ```
 + ###### 取得的Response
@@ -201,19 +199,17 @@ npm start
         }
         ```
   
-### 5.利用ID 或姓名更新學生資料
+### 5.利用ID或是姓名來更新學生資料
 + **使用到的URL**
     + `PUT /api/v1/user/UpdateById`
     + `PUT /api/v1/user/UpdateByName`
 + ###### 取得的Request
     ```
     id=675ed9f4bc8f2ebc70989e03
-    ```
     或者
-    ```
     name=張佳慧
     ```
-    或者
+    更改的部分
     ```json
     {
         "department": "風險管理系",
