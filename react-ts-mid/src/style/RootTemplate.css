@@ -1,0 +1,66 @@
+.root_template {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.message {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.message.error {
+    color: red;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* 自適應列數 */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.student-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-10px);
+}
+
+.student-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.student-info {
+    padding-top: 10px;
+}
+
+.student-info h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.student-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #555;
+}
