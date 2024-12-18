@@ -98,7 +98,7 @@ npm start
                     "class": "A",
                     "email": "tkuee0787@tkuim.com"
                 },
-            ]
+            ]...
         }
         ```
 ### 2.根據 ID 或姓名查詢學生資料
