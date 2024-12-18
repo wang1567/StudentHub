@@ -97,7 +97,7 @@ npm start
                     "grade": "四年級",
                     "class": "A",
                     "email": "tkuee0787@tkuim.com"
-                },...
+                },
             ]
         }
         ```
