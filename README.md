@@ -30,47 +30,48 @@
           +---------------------+
 ```
 ##  安裝與執行指引
-1. 下載專案
+### **1. 下載專案**
 首先，將專案從 GitHub 複製到您的本地機器：
-
-bash
+```bash
 複製程式碼
 git clone https://github.com/yourusername/StudentHub.git
 cd StudentHub
-2. 安裝前端依賴
+```
+### **2. 安裝前端依賴**
 進入 frontend 目錄並安裝所需的 npm 套件：
-
-bash
+```bash
 複製程式碼
 cd frontend
 npm install
+```
 啟動前端開發伺服器：
 
-bash
+```bash
 複製程式碼
 npm start
+```
 前端應用將會運行在 http://localhost:3000。
 
-3. 安裝後端依賴
+### **3. 安裝後端依賴**
 進入 backend 目錄並安裝所需的 npm 套件：
-
-bash
+```bash
 複製程式碼
 cd backend
 npm install
-4. 設定 MongoDB
+```
+### **4. 設定 MongoDB**
 確保您已經安裝並啟動了 MongoDB。如果使用 MongoDB Atlas 或其他雲端資料庫，請在 .env 檔案中設定資料庫連接 URL。
-
-bash
+```bash
 複製程式碼
 MONGO_URI=mongodb://localhost:27017/studenthub
-5. 啟動後端伺服器
+```
+### **5. 啟動後端伺服器**
 在 backend 目錄啟動後端伺服器：
-
-bash
+```bash
 複製程式碼
 npm start
+```
 後端將會運行在 http://localhost:5000。
 
-6. 完成
+### **6. 完成**
 現在，您可以在瀏覽器中打開前端頁面並開始使用應用程式。
