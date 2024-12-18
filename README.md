@@ -75,3 +75,111 @@ npm start
 
 ### **6. 完成**
 現在，您可以在瀏覽器中打開前端頁面並開始使用應用程式。
+
+##API 規格說明
+以下是本專案中提供的 API 規格，包括請求方式、請求參數及回應格式。
+
+### 1. 獲取所有學生資料
+**URL: /api/v1/user/findAll**
+方法: GET
+描述: 獲取所有學生資料。
+回應:
+json
+複製程式碼
+{
+  "code": 200,
+  "message": "find success",
+  "body": [
+    {
+      "id": "12345",
+      "name": "John Doe",
+      "userName": "tkubm1760",
+      "department": "Business Management",
+      "seatNumber": "1760"
+    }
+  ]
+}
+2. 根據學號查找學生資料
+URL: /api/students/{id}
+方法: GET
+描述: 根據學生 ID 查找學生資料。
+回應:
+json
+複製程式碼
+{
+  "code": 200,
+  "message": "find success",
+  "body": {
+    "id": "12345",
+    "name": "John Doe",
+    "userName": "tkubm1760",
+    "department": "Business Management",
+    "seatNumber": "1760"
+  }
+}
+3. 新增學生資料
+URL: /api/students
+方法: POST
+參數:
+json
+複製程式碼
+{
+  "name": "John Doe",
+  "userName": "tkubm1760",
+  "department": "Business Management",
+  "seatNumber": "1760"
+}
+回應:
+json
+複製程式碼
+{
+  "code": 200,
+  "message": "insert success",
+  "body": {
+    "id": "12345",
+    "name": "John Doe",
+    "userName": "tkubm1760",
+    "department": "Business Management",
+    "seatNumber": "1760"
+  }
+}
+4. 更新學生資料
+URL: /api/students/{id}
+方法: PUT
+參數:
+json
+複製程式碼
+{
+  "name": "John Doe",
+  "userName": "tkubm1760",
+  "department": "Business Management",
+  "seatNumber": "1760"
+}
+回應:
+json
+複製程式碼
+{
+  "code": 200,
+  "message": "update success",
+  "body": {
+    "id": "12345",
+    "name": "John Doe",
+    "userName": "tkubm1760",
+    "department": "Business Management",
+    "seatNumber": "1760"
+  }
+}
+5. 刪除學生資料
+URL: /api/students/{id}
+方法: DELETE
+回應:
+json
+複製程式碼
+{
+  "code": 200,
+  "message": "delete success",
+  "body": {
+    "id": "12345"
+  }
+}
+
